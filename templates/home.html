@@ -1,7 +1,7 @@
 <! DOCTYPE html>
 <html>
   <head>
-    <title>Jovian Careers</title>
+    <title>{{company_name}} Careers</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -49,7 +49,11 @@
     <p class = "lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat sed lectus vestibulum mattis ullamcorper velit. Pulvinar proin gravida hendrerit lectus a. Convallis posuere morbi leo urna molestie at. Semper risus in hendrerit gravida rutrum quisque non tellus orci. Odio tempor orci dapibus ultrices in iaculis nunc. Et netus et malesuada fames ac turpis egestas integer eget. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique senectus. In hac habitasse platea dictumst. Pharetra et ultrices neque ornare aenean euismod.</p>
 
     <h2 class = "text-center mt -2 mb -4">Open Positions</h2>
-    <p class = "bodytext"> TODO - Show the jobs here </p>
+      <div> 
+        {% for job in jobs %}
+          {% include 'jobitem.html' %}
+        {% endfor %}
+      </div>
     <div class = "text-center"> 
       <button class="btn btn-primary btn-lg"> Contact Us</button>
       <p class = "mt-4">Copyright 2022, Jovian</p>
